@@ -16,10 +16,17 @@ android {
             }
         }
     }
+    signingConfigs{
+        config{
+            storeFile file('C:/Users/65667/qinjiahao.jks')
+            storePassword '001102'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }
